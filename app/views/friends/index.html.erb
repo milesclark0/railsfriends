@@ -1,0 +1,29 @@
+<h1>Friends</h1>
+<% if user_signed_in? %>
+  <table class="table table-striped">
+    <thead class= "thead-dark">
+      <tr>
+        <th>Name </th>
+        <th>Email </th>
+        <th>Phone </th>
+        <th>Twitter </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @friends.each do |friend| %>
+        <tr>
+          <td>
+          <%= link_to "#{friend.first_name} #{friend.last_name}", friend %>
+          </td>
+          <td><%= friend.email %></td>
+          <td><%= friend.phone %></td>
+          <td><%= friend.twitter %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to "New friend", new_friend_path, class:"btn btn-secondary" %>
+<% else%>
+  <p class="lead"> Sign in to view your friends </p>
+  <%= link_to "Sign in", new_user_session_path, class: "btn btn-primary" %>
+<% end %>

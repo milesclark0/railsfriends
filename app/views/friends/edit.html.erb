@@ -1,0 +1,9 @@
+<h1>Editing friend</h1>
+<%= render "form", friend: @friend %>
+<br>
+<div>
+  <%= link_to "Back to Friends", friends_path, class: "btn btn-secondary" %>
+  <%= button_to 'Remove Friend', @friend, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-outline-danger" %>
+  <%= link_to "Show Friend", @friend, class: "btn btn-secondary"
+ %>
+</div>
