@@ -5,7 +5,7 @@ class HomeController < ApplicationController
 
   # controller for about page "home/about"
   def about 
-    @about_me = "My name is John Doe..."
+    @about_me = "This is the about page"
   end
   
 end

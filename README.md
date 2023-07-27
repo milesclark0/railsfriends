@@ -9,6 +9,11 @@ Things you may want to cover:
 
 * System dependencies
 
+This project uses mailcatcher:
+===to install===
+gem install mailcatcher
+mailcatcher
+
 * Configuration
 
 * Database creation
